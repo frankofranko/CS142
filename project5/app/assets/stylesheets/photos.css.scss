@@ -1,0 +1,55 @@
+// Place all the styles related to the photos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1.photo_title {
+	text-align: center;
+	margin: 40px 20px 30px 20px;
+}
+
+h1.photo_title span {
+	background-color: #FF9E80;
+	color: white;
+	padding: 10px 20px 10px 20px;
+	font-size: 48px;
+}
+
+.photo_unit {
+	align: center;
+	margin: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	background-color: #607D8B;
+	width: 600px;
+	font-size: 18px;
+}
+
+.photo_square img {
+	width: 550px;
+}
+
+.photo_square {	
+
+	margin-left: 12px;
+	margin-right: 20px;	
+	padding:10px;
+	color: #90A4AE;
+}
+
+.comment a{
+	font-weight: bold;
+	text-decoration:none;
+	color: #303F9F;
+}
+
+.comment_date {
+	text-align: right;
+	color: #616161;
+}
+
+.comment {
+	padding: 5px;
+	margin: 14px;
+	background-color: #90A4AE;
+}

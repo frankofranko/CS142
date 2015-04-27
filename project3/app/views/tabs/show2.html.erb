@@ -1,0 +1,10 @@
+<% @title="Tabs" %>
+
+<%= render :partial => "tabs",
+    :locals=>{:tab_names=>[{:label=>"Inventory",:url=>"/inventory"},{:label=>"Order Information",:url=>"/order_info"},{:label=>"Accounts",:url=>"/account"},{:label=>"Shippers",:url=>"/shipper"},{:label=>"Suppliers",:url=>"/supplier"}],:selected_tab=>"Accounts"}
+%>
+
+
+<%= render :partial => "tabs",
+    :locals=>{:tab_names=>[{:label=>"Abstract",:url=>"/abstract"},{:label=>"Introduction",:url=>"/introduction"},{:label=>"Methodology",:url=>"/methodology"},{:label=>"Experiment",:url=>"/experiment"},{:label=>"Conclusion",:url=>"/conclusion"}],:selected_tab=>"Introduction"}
+%>

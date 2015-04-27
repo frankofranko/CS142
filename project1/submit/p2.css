@@ -1,0 +1,89 @@
+body {
+  font-family:Tahoma, Geneva, sans-serif;
+  font-size: 13px;
+}
+
+body div {
+  /* % width may make all vertical */
+  width: 100%;   
+/*  display: block;
+  float: left;*/
+  height: 22px;
+  border-bottom: 1px solid #cccccc;
+  /*margin: 0px 0px 50px 50px;*/
+}
+
+body ul{
+  padding: 0;
+  margin: 0;
+  /*border: 5px 5px 5px 5px;*/
+  display: block;
+  float: left;
+}
+
+body ul li {
+  display: block;
+  float: right;
+}
+
+body ul li {
+  list-style: none;
+  float: left;
+  margin: 0 0 0 5px;
+  
+}
+
+li a {
+  display: block;
+  padding: 0 1px 0 0;
+  text-decoration: none;
+  color: black;
+}
+
+
+li a span.left {
+  background: url(left.gif) top left no-repeat;
+  /*display: block;*/
+  float: left;
+  width: 2px;
+  height: 22px;
+}
+
+li.selected {
+  font-weight: bold;
+}
+
+li:hover a {
+  color: #cc6600;
+  cursor: pointer;
+}
+
+li.selected a span.left {
+  background: url(left-selected.gif) top left no-repeat;
+  border-bottom: 2px solid #ffffff;
+}
+
+
+li a span.mid {
+  background: url(mid.gif) top center repeat-x;
+  /*display: block;*/
+  float: left;
+  padding: 3px 4px 3px 4px;
+}
+
+li.selected a span.mid {
+  background: url(mid-selected.gif) top center repeat-x;
+  border-bottom: 2px solid #ffffff;
+}
+li a span.right {
+  background: url(right.gif) top right no-repeat;
+  /*display: block;*/
+  float: left;
+  width: 2px;
+  height: 22px;
+}
+
+li.selected a span.right {
+  background: url(right-selected.gif) top right no-repeat;
+  border-bottom: 2px solid #ffffff;
+}

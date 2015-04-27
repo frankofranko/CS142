@@ -1,0 +1,37 @@
+<% if @user %>
+
+<div><a href="/photos/new">New Photo</a></div>
+
+<% @title=@user.first_name+"'s photos"%>
+	<h1 class="photo_title"><span ><%= @user.first_name+" "+@user.last_name %>'s Photos</span></h1>
+
+	<% @user.photos.each do |photo| %>
+		<div class = "photo_unit">
+
+			<div class = "photo_square">
+				<img src="<%= asset_path(photo.file_name) %>" alt="<%=@user.first_name%>'s photo"/>
+				<div>Date: <%= photo.date_time.to_formatted_s(:long) %></div>
+			</div>
+
+			<a href="/comments/new/<%= photo.id %>">Add new comment.</a>
+
+	        <% photo.comments.each do |comment| %>
+	            <div class="comment">    
+
+	                <a href="/photos/index/<%= comment.user.id %>">
+	            		<%= comment.user.first_name+" "+comment.user.last_name%>
+	                </a>
+	                <div><%= comment.comment %></div>
+	                <div class = "comment_date"><%= comment.date_time.to_formatted_s(:long)%></div>
+
+	        	</div>
+	        <% end %>
+
+    	</div>
+
+	<% end %>
+
+
+<% else %>
+
+<% end %>

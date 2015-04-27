@@ -1,0 +1,38 @@
+// Place all the styles related to the tags controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.tag_parent {
+	position: relative;
+}
+
+.tag_feedback {
+	position: absolute;
+	border: 2px solid white;
+	background-color: gray;
+	opacity: 0.3;
+}
+
+
+.photo_unit {
+	align: center;
+	margin: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	background-color: #607D8B;
+	width: 600px;
+	font-size: 18px;
+}
+
+.photo_square img {
+	width: 550px;
+}
+
+.photo_square {	
+
+	margin-left: 12px;
+	margin-right: 20px;	
+	padding:10px;
+	color: #90A4AE;
+}

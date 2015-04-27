@@ -1,0 +1,23 @@
+  <div class="tab">
+    <ul>
+      <% tab_names.each do |tab|%>
+        <% if tab[:label]!=selected_tab%>
+        <li>
+          <a href= "<%= tab[:url]%>">
+            <span class="left"> </span>
+            <span class="mid"><%= tab[:label] %></span>
+            <span class="right"> </span>
+          </a>
+        </li>
+        <% else%>
+        <li class="selected">
+          <a href="accounts">
+            <span class="left"> </span>
+            <span class="mid"><%= tab[:label] %></span>
+            <span class="right"> </span>
+          </a>
+        </li>
+        <% end%>
+      <% end %>
+    </ul>
+  </div>

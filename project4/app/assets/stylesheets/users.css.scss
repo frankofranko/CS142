@@ -1,0 +1,36 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user_name {
+	text-align: center;
+}
+
+.user_name a span{
+	background-color: #546E7A;
+	color: white;
+	margin: 10px;
+	padding: 10px 15px 10px 15px;
+	display:inline-block;
+	font-size: 24px;
+}
+
+.user_name a:visited{
+	color: white;
+	text-decoration:none;
+}
+
+h1.user_title {
+	text-align: center;
+	margin-top: 50px;
+
+}
+
+h1.user_title span {
+	background-color: #FF9E80;
+	color: white;
+	padding: 10px 20px 10px 20px;
+	margin: 10px;
+	font-size: 48px;
+}
+

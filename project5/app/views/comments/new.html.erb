@@ -1,0 +1,26 @@
+<% if flash[:error] %>
+  <%= flash[:error] %>
+<% end %>
+
+<% if !session[:user] %>
+	<div>You should log in for posting a comment.</div>
+<% elsif @photo%>
+	<div class = "photo_unit">
+
+		<div class = "photo_square">
+			<img src="<%= asset_path(@photo.file_name) %>" alt="Photo of user <%=@photo.user_id%>"/>
+			<div>Date: <%= @photo.date_time.to_formatted_s(:long) %></div>
+		</div>
+
+	    <div class="comment">    
+			<%= form_for @comment, :url => {:action => :create, :id=>@photo.id} do |f| %>
+  			<div><%= f.text_field(:comment) %></div>
+			<%= submit_tag "Post comment" %>
+			<% end %>
+	    </div>
+
+   	</div>
+
+<% else%>
+	<p> Photo not found.</p>
+<% end%>

@@ -1,0 +1,13 @@
+<% if flash[:error] %>
+  <%= flash[:error] %> 
+<% end %>
+
+<%= form_for(@user, :url=> {:controller => :users, :action => :create}) do |form|%>
+	<div>First Name <%= form.text_field(:first_name) %></div>
+	<div>Last Name <%= form.text_field(:last_name) %></div>
+	<div>User Name <%= form.text_field(:login) %></div>
+	<div>Password <%= form.text_field(:password) %></div>
+	<div>Confirm Password <%= form.text_field(:password_confirmation) %></div>
+	<%= submit_tag "Post comment" %>
+
+<% end %>

@@ -1,0 +1,84 @@
+body {
+  font-family:Tahoma, Geneva, sans-serif;
+  font-size: 13px;
+}
+
+.nav {
+  width: 100%;
+  display: block;
+  float: left;
+  height: 22px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.nav * {
+  padding: 0;
+  margin: 0;
+}
+
+.nav ul {
+  display: block;
+  float: left;
+}
+
+.nav ul li {
+  list-style: none;
+  float: left;
+  margin: 0 0 0 5px;
+  
+}
+
+.nav ul li a {
+  display: block;
+  padding: 0 1px 0 0;
+  text-decoration: none;
+  color: black;
+}
+
+
+.nav ul li a span.left {
+  background: url(images/left.gif) top left no-repeat;
+  display: block;
+  float: left;
+  width: 2px;
+  height: 22px;
+}
+
+.nav ul li.selected {
+  font-weight: bold;
+}
+
+.nav ul li:hover a {
+  color: #cc6600;
+  cursor: pointer;
+}
+
+.nav ul li.selected a span.left {
+  background: url(images/left-selected.gif) top left no-repeat;
+  border-bottom: 2px solid #ffffff;
+}
+
+
+.nav ul li a span.mid {
+  background: url(images/mid.gif) top center repeat-x;
+  display: block;
+  float: left;
+  padding: 3px 4px 3px 4px;
+}
+
+.nav ul li.selected a span.mid {
+  background: url(images/mid-selected.gif) top center repeat-x;
+  border-bottom: 2px solid #ffffff;
+}
+.nav ul li a span.right {
+  background: url(images/right.gif) top right no-repeat;
+  display: block;
+  float: left;
+  width: 2px;
+  height: 22px;
+}
+
+.nav ul li.selected a span.right {
+  background: url(images/right-selected.gif) top right no-repeat;
+  border-bottom: 2px solid #ffffff;
+}

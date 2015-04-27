@@ -1,0 +1,13 @@
+<h1 class = "user_title"><span>Users List</span></h1>
+
+<% @title="User List"%>
+
+<% @user_info.each do |user| %>
+    
+    <div class="user_name">
+    <a href="/photos/index/<%= user.id %>">
+        <span><%= user.first_name + " " + user.last_name %></span>
+    </a>
+	</div>
+
+<% end %>

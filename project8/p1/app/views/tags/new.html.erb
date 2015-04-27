@@ -1,0 +1,35 @@
+<% content_for :head do %>
+    <%= stylesheet_link_tag "tags" %>
+<% end %>
+
+<div class = "photo_unit">
+	<div class = "photo_square">
+		<div class = "tag_parent" id = "tag_parent">
+			<img src="<%= asset_path(@photo.file_name) %>" alt="<%=@photo.id%> new tag"/>
+			<div class = "tag_feedback" id = "tag_feedback"></div>
+		</div>
+		<div>Date: <%= @photo.date_time.to_formatted_s(:long) %></div>
+
+		<%= form_for(@tag, :url => {:controller => :tags, :action => :create, :id => @photo.id}) do |form| %>
+
+            <fieldset>
+                <%= form.hidden_field(:photo_id, :value => @photo.id) %>
+                <%= form.hidden_field(:x_pos) %>
+                <%= form.hidden_field(:y_pos) %>
+                <%= form.hidden_field(:width) %>
+                <%= form.hidden_field(:height) %>
+                <%= form.label("ChooseUser:")%>
+                <%= form.select(:user_id, options_for_select(@user_list), {})%>
+                <%= form.submit("Create tag") %>
+            </fieldset>
+        <% end %>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+    //<![CDATA[
+    var tagger = new Tagger("tag_parent", "tag_feedback", "tag_x_pos", "tag_y_pos", "tag_width", "tag_height");
+    console.log("in")
+    //]]>
+</script>

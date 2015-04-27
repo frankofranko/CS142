@@ -1,0 +1,16 @@
+<h1>State Filter</h1>
+<% @title="State Filter"%>
+<p>Substring for filtering: <%= @substring%></p>
+
+<table cellspacing="0">
+	<% @result.each do |state| %>
+		<tr>
+			<td> <%=state%> </td>
+		</tr>
+	<% end %>
+</table>
+
+
+
+
+

@@ -1,0 +1,2 @@
+The PhotoSearch class can be used in similar usage to send a search request and update the view.
+The keyup method can be used to other element which also requires a event listener reponding to the change of content.

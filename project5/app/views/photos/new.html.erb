@@ -1,0 +1,14 @@
+<% if flash[:error] %>
+  <%= flash[:error] %>
+<% end %>
+
+<% if !session[:user] %>
+	<div>You should log in for posting a comment.</div>
+<% else %>
+
+	<%= form_for(@photo, :url => {:action => :create}) do |form| %>
+		<%= form.file_field(:file) %>
+		<%= form.submit("Upload Photo") %>
+	<% end %>
+
+<% end %>
